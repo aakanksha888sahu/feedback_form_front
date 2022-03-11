@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee Feedback Form</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+      <img src="/assets/kipi_logo.png" style="width: 20vw; height: 80px; "/>
+      <label style="margin-left: 15vw; font-size: 2.6vw; color: #b3d943;">Employee Engagement Survey</label>
+    </div>
+    <div class="testbox">
+      <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <h1>Employee Feedback Form</h1>
+        <p>Please take a few minutes to give us feedback by filling in this short Employee Feedback Form. We are conducting this research in order to measure your level of satisfaction at the work place. We thank you for your participation.</p>
+        <hr />
+        <h3>Overall experience with our service</h3>
+        <table>
+          <tr>
+            <th class="first-col"></th>
+            <th><img class="faceImage" src="/assets/smile.png"/></th>
+            <th><img class="faceImage" src="/assets/lessSmile.png"/></th>
+            <th><img class="faceImage" src="/assets/neutralFace.png"/></th>
+            <th><img class="faceImage" src="/assets/sadFace.png"/></th>
+            <th><img class="faceImage" src="/assets/saddestFace.png"/></th>
+          </tr>
+          <tr>
+            <td class="first-col">How would you rate your overall experience with our service?</td>
+            <td><input type="radio" value="Very Good" name="overall" formControlName="overall" /></td>
+            <td><input type="radio" value="Good" name="overall" formControlName="overall"/></td>
+            <td><input type="radio" value="Fair" name="overall" formControlName="overall"/></td>
+            <td><input type="radio" value="Poor" name="overall" formControlName="overall"/></td>
+            <td><input type="radio" value="Very Poor" name="overall" formControlName="overall"/></td>
+          </tr>
+          <tr>
+            <td class="first-col">How satisfied are you with the Salary?</td>
+            <td><input type="radio" value="Very Good" name="Salary" formControlName="Salary" /></td>
+            <td><input type="radio" value="Good" name="Salary" formControlName="Salary"/></td>
+            <td><input type="radio" value="Fair" name="Salary" formControlName="Salary"/></td>
+            <td><input type="radio" value="Poor" name="Salary" formControlName="Salary"/></td>
+            <td><input type="radio" value="Very Poor" name="Salary" formControlName="Salary"/></td>
+          </tr>
+          <tr>
+            <td class="first-col">How satisfied are you with the work environment</td>
+            <td><input type="radio" value="Very Good" name="environment" formControlName="environment" /></td>
+            <td><input type="radio" value="Good" name="environment" formControlName="environment"/></td>
+            <td><input type="radio" value="Fair" name="environment" formControlName="environment"/></td>
+            <td><input type="radio" value="Poor" name="environment" formControlName="environment"/></td>
+            <td><input type="radio" value="Very Poor" name="environment" formControlName="environment"/></td>
+          </tr>
+          <tr>
+            <td class="first-col">How satisfied are you with the profile of job?</td>
+            <td><input type="radio" value="Very Good" name="profile" formControlName="profile" /></td>
+            <td><input type="radio" value="Good" name="profile" formControlName="profile"/></td>
+            <td><input type="radio" value="Fair" name="profile" formControlName="profile"/></td>
+            <td><input type="radio" value="Poor" name="profile" formControlName="profile"/></td>
+            <td><input type="radio" value="Very Poor" name="profile" formControlName="profile"/></td>
+          </tr>
+          <tr>
+            <td class="first-col">How satisfied are you with the senior leadership of the company?</td>
+            <td><input type="radio" value="Very Good" name="leadership" formControlName="leadership" /></td>
+            <td><input type="radio" value="Good" name="leadership" formControlName="leadership"/></td>
+            <td><input type="radio" value="Fair" name="leadership" formControlName="leadership"/></td>
+            <td><input type="radio" value="Poor" name="leadership" formControlName="leadership"/></td>
+            <td><input type="radio" value="Very Poor" name="leadership" formControlName="leadership"/></td>
+          </tr>
+          <tr>
+            <td class="first-col">Are you satisfied with the award and recognition give for your work?</td>
+            <td><input type="radio" value="Very Good" name="recognition" formControlName="recognition" /></td>
+            <td><input type="radio" value="Good" name="recognition" formControlName="recognition"/></td>
+            <td><input type="radio" value="Fair" name="recognition" formControlName="recognition"/></td>
+            <td><input type="radio" value="Poor" name="recognition" formControlName="recognition"/></td>
+            <td><input type="radio" value="Very Poor" name="recognition" formControlName="recognition"/></td>
+          </tr>
+          <tr>
+            <td class="first-col">How satisfied are you with the training given to you?</td>
+            <td><input type="radio" value="Very Good" name="training" formControlName="training" /></td>
+            <td><input type="radio" value="Good" name="training" formControlName="training"/></td>
+            <td><input type="radio" value="Fair" name="training" formControlName="training"/></td>
+            <td><input type="radio" value="Poor" name="training" formControlName="training"/></td>
+            <td><input type="radio" value="Very Poor" name="training" formControlName="training"/></td>
+          </tr>
+          <tr>
+            <td class="first-col">How satisfied are you with the future growth oppurtunities?</td>
+            <td><input type="radio" value="Very Good" name="growth" formControlName="growth" /></td>
+            <td><input type="radio" value="Good" name="growth" formControlName="growth"/></td>
+            <td><input type="radio" value="Fair" name="growth" formControlName="growth"/></td>
+            <td><input type="radio" value="Poor" name="growth" formControlName="growth"/></td>
+            <td><input type="radio" value="Very Poor" name="growth" formControlName="growth"/></td>
+          </tr>
+         
+
+         
+        </table>
+
+        <div>
+          <br>
+          <br>
+          <label style="color: black; font-size: large;">Have you been compensated for working over time?</label><br>
+          <table style="display: inline-block;">
+            <tr style="white-space: nowrap;overflow-x: auto;"><input type="radio" name="radio"/><label id="radioYN"> Yes </label> </tr>
+            <tr style="white-space: nowrap;overflow-x: auto;"><input type="radio" name="radio"/><label id="radioYN"> No </label> </tr>
+          </table>
+          <label>If No, Please Explain</label>
+          <textarea style="height: 15vh;" placeholder="Type here..."></textarea>
+        </div>
+
+        <div>
+          <br>
+          <br>
+          <label style="color: black; font-size: large;">Do you feel valued at work?</label><br>
+          <table style="display: inline-block;">
+            <tr style="white-space: nowrap;overflow-x: auto;"><input type="radio" name="radio"/><label id="radioYN"> Yes </label> </tr>
+            <tr style="white-space: nowrap;overflow-x: auto;"><input type="radio" name="radio"/><label id="radioYN"> No </label> </tr>
+          </table>
+          <label>If No, Please Explain</label>
+          <textarea style="height: 15vh;" placeholder="Type here..."></textarea>
+        </div>
+
+        <div>
+          <br>
+          <br>
+          <label style="color: black; font-size: large;">Do you have the resources you need to perform your job well?</label><br>
+          <table style="display: inline-block;">
+            <tr style="white-space: nowrap;overflow-x: auto;"><input type="radio" name="radio1"/><label id="radioYN"> Yes </label> </tr>
+            <tr style="white-space: nowrap;overflow-x: auto;"><input type="radio" name="radio1"/><label id="radioYN"> No </label> </tr>
+          </table>
+          <label>If No, Please Explain</label>
+          <textarea style="height: 15vh;" placeholder="Type here..."></textarea>
+        </div>
+
+        <div>
+          <br>
+          <br>
+          <label style="color: black; font-size: large;">Does your job cause you stress or anxiety?</label><br>
+          <table style="display: inline-block;">
+            <tr style="white-space: nowrap;overflow-x: auto;"><input type="radio" name="radio2"/><label id="radioYN"> Yes </label> </tr>
+            <tr style="white-space: nowrap;overflow-x: auto;"><input type="radio" name="radio2"/><label id="radioYN"> No </label> </tr>
+          </table>
+          <label>If No, Please Explain</label>
+          <textarea style="height: 15vh;" placeholder="Type here..."></textarea>
+          <br><br><br>
+          <label style="color: black; font-size: large;">Please Provide Any Additional Feedback</label>
+          <textarea style="height: 15vh;" placeholder="Type here..."></textarea>
+        </div>
+       <!-- <h4>What should we change in order to live up to your expectations?</h4>
+        <textarea rows="5"></textarea>
+        <h4>Email</h4>
+        <small>Only if you want to hear more from us.</small>
+        <input class="email" type="text" name="name" />-->
+        <div class="btn-block">
+          <button type="submit" href="/">Send Feedback</button>
+          <br>
+          <a href="/feedbackForm2">Go to next form</a>
+        </div>
+      </form>
+  
+    </div>
+  </body>
+</html>
